@@ -121,6 +121,8 @@ Running `"neural networks that learn word representations from text"`:
 | Hybrid | 45ms | Most queries (balanced) | When one retriever is confidently wrong |
 | Reranker | 7200ms* | Precision, challenging queries | Speed (violates constraint) |
 
+**MY CLAIM**: For this corpus under 1s latency constraint, **hybrid with RRF** is the best configuration. The reranker is more accurate but too slow for the constraint.
+
 # 3. My 20 Queries:
 
 ## What Each Difficulty Tests
@@ -140,5 +142,4 @@ Running `"neural networks that learn word representations from text"`:
 
 
 
-**Claim**: For this corpus under 1s latency constraint, **hybrid with RRF** is the best configuration. The reranker is more accurate but too slow for the constraint.
 
