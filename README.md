@@ -33,8 +33,6 @@ My corpus has documents ranging from 367 characters (short stub articles) to 300
 
 ## Honest Limitations
 
-My corpus is not perfect. Here is what is missing:
-
 - **Only 346 documents, not 400**. The categories I chose ran dry. I decided quality (staying on-topic) matters more than padding with off-topic pages.
 - **Text is truncated at 3000 characters**. Full Wikipedia articles would exceed my latency budget of 1 second. I kept the introduction sections which contain the core concepts.
 - **No cross-domain queries**. You cannot ask about "machine learning in ancient Rome" because my corpus has no history documents. This is fine because my queries stay within the domain.
