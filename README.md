@@ -121,6 +121,23 @@ Running `"neural networks that learn word representations from text"`:
 | Hybrid | 45ms | Most queries (balanced) | When one retriever is confidently wrong |
 | Reranker | 7200ms* | Precision, challenging queries | Speed (violates constraint) |
 
+# 3. My 20 Queries:
+
+## What Each Difficulty Tests
+
+| Difficulty | What It Tests | Expected Best Config |
+|------------|---------------|---------------------|
+| STANDARD | Exact term matching, basic concept retrieval | BM25 (fast, accurate enough) |
+| HARD (Paraphrase) | Semantic understanding without keyword overlap | Dense |
+| HARD (Multi-hop) | Connecting multiple concepts across documents | Reranker |
+| HARD (Ambiguous) | Handling underspecified information needs | Hybrid |
+
+---
+
+## One Sentence Summary
+
+**15 easy queries verify basic retrieval works; 5 hard queries (paraphrase, multi-hop, ambiguous) expose differences between BM25, dense, hybrid, and reranker.**
+
 
 
 **Claim**: For this corpus under 1s latency constraint, **hybrid with RRF** is the best configuration. The reranker is more accurate but too slow for the constraint.
