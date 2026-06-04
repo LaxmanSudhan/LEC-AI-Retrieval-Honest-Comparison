@@ -105,10 +105,10 @@ Running `"neural networks that learn word representations from text"`:
 
 **Observations**:
 
-- **BM25 is fast** (7ms) but returns "Handwriting recognition" — keyword match without semantic understanding.
-- **Dense captures semantics** — "GloVe" and "ELMo" are both word embedding methods. BM25 missed these.
-- **Hybrid balances both** — top results include embedding methods AND attention mechanisms.
-- **Reranker is slow** (7.2 seconds) — violates the p95 < 1s constraint. This is a problem.
+- **BM25 is fast** 
+- **Dense captures semantics** 
+- **Hybrid balances both** 
+- **Reranker is slow**
 
 ---
 
