@@ -68,7 +68,7 @@ I implemented four retrieval methods on the same 346 Wikipedia documents:
 
 ### Decision 1: RRF over weighted sum for hybrid
 
-**Why**: Weighted sum requires tuning `alpha` (0.3? 0.7?). RRF uses only rank positions, works out of the box, and performs consistently across queries.
+**Why**: Weighted sum requires tuning `alpha` (0.3, 0.7). RRF uses only rank positions, works out of the box, and performs consistently across queries.
 
 **Trade-off**: RRF ignores score magnitudes. A document with BM25 score 100 vs 10 gets same rank boost. This is fine because BM25 and dense scores are on different scales anyway.
 
@@ -121,7 +121,7 @@ Running `"neural networks that learn word representations from text"`:
 | Hybrid | 45ms | Most queries (balanced) | When one retriever is confidently wrong |
 | Reranker | 7200ms* | Precision, challenging queries | Speed (violates constraint) |
 
-*Would fix with GPU or smaller model in production.
 
-**Claim**: For this corpus under 1s latency constraint, **hybrid with RRF** is the best configuration — it never fails catastrophically and runs in 45ms. The reranker is more accurate but too slow for the constraint.
+
+**Claim**: For this corpus under 1s latency constraint, **hybrid with RRF** is the best configuration. The reranker is more accurate but too slow for the constraint.
 
